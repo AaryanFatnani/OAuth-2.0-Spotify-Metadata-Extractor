@@ -14,8 +14,8 @@ An automated REST API integration built in Python to securely authenticate with 
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/](https://github.com/)hellsguardianyt-cell/OAuth-2.0-Spotify-Metadata-Extractor.git
-   cd Auth-2.0-Spotify-Metadata-Extractor.git
+   git clone [https://github.com/](https://github.com/)AaryanFatnani/OAuth-2.0-Spotify-Metadata-Extractor.git
+   cd Auth-2.0-Spotify-Metadata-Extractor
 Set up the virtual environment:
 
 DOS
@@ -28,7 +28,6 @@ pip install -r requirements.txt
 Configure Environment Variables:
 Create a .env file in the root directory and add your Spotify Developer credentials:
 
-Code snippet
 SPOTIPY_CLIENT_ID='your_client_id_here'
 SPOTIPY_CLIENT_SECRET='your_client_secret_here'
 SPOTIPY_REDIRECT_URI='[http://127.0.0.1:8888/callback](http://127.0.0.1:8888/callback)'
