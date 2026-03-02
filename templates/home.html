@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Spotify Playlists</title>
+    <style>
+        body {
+            background-color: #191414;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            background-color: #1ed760;
+            color: #191414;
+            padding: 20px;
+            font-size: 50px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            background-color: #1ed760;
+            height: 60px;
+            width: 250px;
+            color: white;
+            font-size: large;
+            border: 3px solid darkgreen;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #1aa94f;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <h1>OAuth 2.0 Spotify Metadata Extractor</h1>
+    <br><br><br>
+    <div>
+        Login to Spotify:
+        <a href="{{url_for('login') }}"><button>Click Here</button></a>
+    </div>
+</body>
+</html>

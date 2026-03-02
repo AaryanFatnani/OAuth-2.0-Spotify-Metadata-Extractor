@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Download Songs</title>
+    <style>
+        body {
+            background-color: #191414;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        h1,ol{
+            background-color: #1ed760;
+            color: #191414;
+            padding: 20px;
+            font-size: 50px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            margin: 20px;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            background-color: #1ed760;
+            color: white;
+            padding: 10px 20px;
+            font-size: large;
+            border: 3px solid darkgreen;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: #1aa94f;
+        }
+        .loader {
+            border: 16px solid #f3f3f3; 
+            border-top: 16px solid #1aa94f; 
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: none;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script type="text/javascript">
+        function showLoader(){
+            document.getElementById('loader').style.display="block";
+        }
+    </script>
+</head>
+<body>
+    <br><br>
+    <h1>Songs Fetched for User {{username}} from the following playlists:</h1>
+    <h1>Songs saved to songs.csv</h1>
+        <ol>
+        {% for playlistname in playlists %}
+        <li>{{playlistname}}</li>
+        {% endfor %}
+        </ol>
+    <div>
+        {% for song in songs %}
+        <p>{{song['Song Name']}}</p>
+        {% endfor %}
+    </div>
+    <div id="loader" class="loader"></div>
+</body>
+</html>
